@@ -12,18 +12,6 @@ This project focuses on demonstrating real-time object tracking through a simple
 
 Since this project utilizes a pre-trained DETR model, image labeling is not required. The model is already trained on a large dataset of various objects.
 
-# Required Libraries
-
-OpenCV (cv2)
-
-PyTorch
-
-Torchvision
-
-Pillow (PIL Fork)
-
-NumPy
-
 # System Requirements
 
 Python 3.6 or later
@@ -48,14 +36,6 @@ pip install NumPy
 Run the script main.py. This will start the webcam feed and display objects detected in each frame with bounding boxes.
 
 Press 'q' to exit the application.
-
-# Generic Information
-
-This project provides a basic example of real-time object tracking using a pre-trained model.
-
-For training custom object detection models with YOLOv8, refer to the official YOLOv8 documentation: https://docs.ultralytics.com/modes/train/
-
-This project is for educational purposes only.
 
 # Disclaimer
 
