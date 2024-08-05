@@ -54,6 +54,9 @@ Draw bounding boxes around the objects of interest.
 
 Save the annotations in the Pascal VOC format.
 
+# Annotation Formats
+LabelImg supports multiple annotation formats, but Pascal VOC is widely used for object detection tasks.
+
 # Disclaimer
 
 The pre-trained DETR model used in this project might not detect all objects perfectly. Its performance depends on the training data and specific object types.
