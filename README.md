@@ -54,6 +54,60 @@ Draw bounding boxes around the objects of interest.
 
 Save the annotations in the Pascal VOC format.
 
+# Training YOLOv8 :
+
+**Prepare your dataset:** You'll need a labeled dataset in the COCO format. Tools like VGG Image Annotator (VIA) or LabelImg can be used for labeling.
+
+**Dataset Structure**
+
+**YOLOv8 typically requires the following directory structure:**
+```
+/dataset
+    /images
+        /train
+ image1.jpg
+            image2.jpg
+            ...
+        /val
+            image1.jpg
+            image2.jpg
+            ...
+    /labels
+       /train
+            image1.txt
+            image2.txt
+            ...
+        /val
+ image1.txt
+            image2.txt
+            ...
+```
+**Images:** JPEG or PNG files for training and validation.
+
+**Labels:** YOLO format text files (.txt) for annotations 
+
+**Train the model:** Refer to the YOLOv8 documentation (https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide) for detailed training instructions. The general steps involve creating a YAML configuration file, preparing your dataset, and running the training script.
+
+# Train the Model
+
+With YOLOv8 installed, you can train your model using the following command:
+```
+yolo train model=yolov8n.pt data=data.yaml epochs=20 imgsz=100
+```
+**Parameters Explained:**
+
+**model=yolov8n.pt:** The pre-trained YOLOv8 model to start with (YOLOv8 has different versions like yolov8n for nano, yolov8s for small, etc.).
+
+**data=data.yaml:** Path to your YAML configuration file.
+
+**epochs=20:** Number of training epochs.
+
+**imgsz=100:** Image size (resolution) for training.
+
+# Monitor Training
+
+The training process will generate logs and save checkpoints. Monitor the output for metrics like loss, precision, recall, and mAP (mean Average Precision). You can visualize the training progress using tools like TensorBoard or directly from the log files.
+
 # Annotation Formats
 LabelImg supports multiple annotation formats, but Pascal VOC is widely used for object detection tasks.
 
