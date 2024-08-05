@@ -33,9 +33,26 @@ pip install Pillow (PIL Fork)
 
 pip install NumPy
 
-Run the script main.py. This will start the webcam feed and display objects detected in each frame with bounding boxes.
+# Labeling Dataset with LabelImg
+If you need to label your dataset, you can use LabelImg, an open-source graphical image annotation tool.
 
-Press 'q' to exit the application.
+Using LabelImg to Label Your Dataset
+Install LabelImg:
+
+```
+pip install labelImg
+```
+Run LabelImg:
+```
+labelImg
+```
+**Label your images:**
+
+Open your images in LabelImg.
+
+Draw bounding boxes around the objects of interest.
+
+Save the annotations in the Pascal VOC format.
 
 # Disclaimer
 
